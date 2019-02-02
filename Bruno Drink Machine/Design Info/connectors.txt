@@ -1,0 +1,39 @@
+power connector
+  B02P-VL
+pin 1 -- 12V
+pin 2 -- GND
+
+pump, fan, and valve controls
+  B02B-PNI
+pin 1 -- MOSFET drain
+pin 2 -- 12V
+
+Peltier controls
+  B02P-VL
+pin 1 -- MOSFET drain
+pin 2 -- 12V
+
+flow sensor
+  3pin header, 0.1" pitch
+pin 1 -- GND
+pin 2 -- Vcc
+pin 3 -- signal
+	(freq = (98*Q) ± 2% where Q = Litres/min) therefore, flow rate is equal to == (meas. freq.) / 98  [L/min]
+
+temperature sensors
+  B03B-PNI
+pin 1 -- GND
+pin 2 -- 12V
+pin 3 -- temp.
+
+SPI future-features
+  B03B-PNI
+pin 1 -- 12V
+pin 2 -- 5V
+pin 3 -- GND
+pin 4 -- [not used]
+pin 5 -- MOSI
+pin 6 -- MISO
+pin 7 -- SCK
+pin 8 -- nCS
+
