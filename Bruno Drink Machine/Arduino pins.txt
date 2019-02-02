@@ -1,0 +1,76 @@
+Arduino pin descriptions
+
+ 0 RX	UART RX pin
+ 1 TX	UART TX pin
+ 2		flow sensor input (Freq = (98*Q) ± 2% where Q = Litres/min)
+~3		adjustable pump
+ 4		shift register strobe
+~5		adjustable pump
+~6		adjustable pump
+ 7		Peltier TEC 2
+ 8		Peltier TEC 1
+~9		Peltier cooling fan 2
+~10		Peltier cooling fan 1
+~11	SPI	MOSI
+ 12	SPI	MISO
+ 13	SPI	SCK
+
+Analog Pins
+A0		D14 self-cleaning valve control
+A1		D15 normal operation valve control
+A2		Peltier 1 temperature sensor *
+A3		fluid 1 temperature +
+A4 SDA	fluid 2 temperature +
+A5 SCL	Peltier 2 temperature sensor *
+
+Shift register pins
+Q0		fast pump
+Q1		LCD chip select (SPI)
+Q2		---
+Q3		---
+Q4		SPI nCS1
+Q5		SPI nCS2
+Q6		SPI nCS3
+Q7		SPI nCS4
+
+
+
+
+Va = value from ADC reading (0-1023)
+
+Peltier °C == (Va-409)/8.188
+	on Arduino:  Tp = ((Va-409)*1000)/8188  [°C]
+
+fluid °C == (Va-409)/16.376
+	on Arduino:  Tp = ((Va-409)*1000)/16376  [°C]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
