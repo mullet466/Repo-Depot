@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2019-03-23T19:51:22Z",
+        "GenerationSoftware": {
+            "Application": "EAGLE",
+            "Vendor": "Autodesk",
+            "Version": "9.2.2"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 1.57,
+        "LayerNumber": 2,
+        "Name": {
+            "ProjectId": "LCD ctrl"
+        },
+        "Owner": "Aaron Mcmann <mullet_466@hotmail.com>",
+        "Size": {
+            "X": 88.25,
+            "Y": 81.25
+        }
+    }
+}
