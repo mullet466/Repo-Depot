@@ -1,0 +1,77 @@
+SPI commands:
+
+1)	0001scnn:  draw soft button
+	--	s = side (1=left, 0=right)
+	--	c = clear (1=delete soft button, 0=keep)
+	--	nn = position (0,1,2,3)
+ex: 00011010 draws a soft button on the left at position #2
+
+2)	0010scnn .. .. ..:  delete/change text for soft button
+	--	s = side (1=left, 0=right)
+	--	c = delete/!change (1=delete, 0=change)
+	--	nn = position (0,1,2,3)
+ex: 00100101 clears the text on right-side button #1
+ex: 00100001 "Pour It" will set the text on right-side button #1 to be 'Pour
+        It', but unlike command 3 which can concatenate, this command can
+        only change the button's text, or delete it completely.
+
+3)	0011drrr .. .. ..:  draw/erase text on screen
+	--	d = draw/erase (1=draw, 0=erase)
+	--	rrr = reserved for future use (formatting?  justification?)
+	.. .. .. text in ASCII format
+ex: 00111000 "Joe Mama" displays the text 'Joe Mama' on the screen
+ex: 00110000 "Joe Mama" clears all the text (except soft button text)
+        note:  if there is already text on the screen, setting d=1 will
+        append (concatenate) the new text to the end of the existing text.
+        clearing d=0 will erase the existing text, and leave the ASCII
+        string on the screen instead.
+
+4)	0100xxxx:  clear entire screen
+	--	x = don't care
+ex: 0100.... clears the display, leaving only the background image
+
+5)	0101pppp:  set backlight max brightness
+	--	pppp = power from 0 (off) to 15 (max)
+ex: 01010111 sets the backlight brightness to about half-power
+
+6)	0110pppp:  set backlight fade-out timer
+	--	pppp = delay time [s] == pppp * 4
+ex: 01100110 sets the backlight fade-out timer to 24 seconds
+        note:  using this command with pppp=0 will disable the fade-out timer
+
+7)	0111trrr:  set backlight fade-out rate
+	--	t = "two-tone" fade-out (1=two-tone, 0=liinear)
+	--	rrr = rate rrr*5 == %/s
+ex: 01110110 sets the backlight fade-out timer to 30 %/sec
+        note:  used in two-tone mode, this command will fade the backlight
+        slowly until ~66%, during which time any user interaction will be
+        acknowledged and will restore brightness.  When two-tone mode is used,
+        rrr*2 is used for the first fade, and rrr*4 for the second, meaning
+        01111110 will fade slowly at 12%/s until ~66% brightness is reached,
+        and then at 24%/s until 0% (off).
+99)	1000nnnn:  something on the USB port...  to be decided at a later date
+
+
+
+example program:
+
+// other code
+LCD_Start();        // pull chip select low
+
+LCD_Write(0x10);    // draw button in top-right
+LCD_Write(0x11);    // draw button in second-from-top-right
+LCD_Write(0x13);    // draw button in bottom-right
+
+LCD_Write(0x20);    // text for button in top-right
+LCD_Write("Pour It!");
+LCD_Write(0x21);    // text for button in second-from-top-right
+LCD_Write("Modify");
+LCD_Write(0x23);    // text for button in bottom-right
+LCD_Write("Cancel");
+
+LCD_Write(0x38);    // draw screen's text
+LCD_Write("You've selected cranberry juice and vodka.  Is this correct?");
+
+// other code
+
+
