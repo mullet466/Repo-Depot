@@ -1,0 +1,4 @@
+in v1.1
+- move USB closer to edge of board
+- add SPI isolator (3.3V board, 5V Shield)
+- tidy up silk screen labels around SMD pads and vias
