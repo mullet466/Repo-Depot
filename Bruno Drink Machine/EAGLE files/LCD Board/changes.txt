@@ -3,4 +3,4 @@ in v1.1
 - add SPI isolator (3.3V board, 5V Shield)
 - tidy up silk screen labels around SMD pads and vias
 - move 40pin connector to new board (so it can be >0.5" away) with ribbon cable?
-
+- add more coper around GND connection on 8p SPI connector
