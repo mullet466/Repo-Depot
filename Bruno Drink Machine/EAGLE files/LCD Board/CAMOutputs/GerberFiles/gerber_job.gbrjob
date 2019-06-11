@@ -1,7 +1,7 @@
 {
     "Header": {
         "Comment": "All values are metric (mm)",
-        "CreationDate": "2019-03-23T19:51:22Z",
+        "CreationDate": "2019-04-13T20:15:03Z",
         "GenerationSoftware": {
             "Application": "EAGLE",
             "Vendor": "Autodesk",
@@ -17,8 +17,8 @@
         },
         "Owner": "Aaron Mcmann <mullet_466@hotmail.com>",
         "Size": {
-            "X": 88.25,
-            "Y": 81.25
+            "X": 81.25,
+            "Y": 88.25
         }
     }
 }
