@@ -55,7 +55,7 @@
 <layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
 <layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="96" name="Values" color="7" fill="1" visible="no" active="yes"/>
+<layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="100" name="Pilot_Holes" color="14" fill="1" visible="yes" active="yes"/>
@@ -6886,7 +6886,7 @@ Source: AVX .. aphvc.pdf</description>
 <parts>
 <part name="IC1" library="Aaron SMT" deviceset="PIC24FJ256DA210" device="-I/PT"/>
 <part name="P1" library="Aaron SMT" deviceset="CONN-40P" device="-62684-401100ALF"/>
-<part name="P18" library="Aaron" deviceset="CONN-8P" device="-PND"/>
+<part name="P3" library="Aaron" deviceset="CONN-8P" device="-PND"/>
 <part name="U$26" library="Aaron" deviceset="GND" device=""/>
 <part name="U$1" library="Aaron" deviceset="GND" device=""/>
 <part name="IC2" library="Aaron SMT" deviceset="IS62LV256AL" device=""/>
@@ -6977,7 +6977,7 @@ MISO = RP16</text>
 <instance part="P1" gate="P" x="144.78" y="-2.54" smashed="yes">
 <attribute name="NAME" x="142.24" y="-30.48" size="1.778" layer="95"/>
 </instance>
-<instance part="P18" gate="P" x="147.32" y="66.04" smashed="yes" rot="MR0">
+<instance part="P3" gate="P" x="147.32" y="66.04" smashed="yes" rot="MR0">
 <attribute name="NAME" x="149.86" y="48.26" size="1.27" layer="95" rot="MR0"/>
 </instance>
 <instance part="U$26" gate="GND" x="142.24" y="45.72" smashed="yes"/>
@@ -7203,7 +7203,7 @@ MISO = RP16</text>
 <nets>
 <net name="GND" class="0">
 <segment>
-<pinref part="P18" gate="P" pin="3"/>
+<pinref part="P3" gate="P" pin="3"/>
 <pinref part="U$26" gate="GND" pin="GND"/>
 <wire x1="144.78" y1="63.5" x2="142.24" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="142.24" y1="63.5" x2="142.24" y2="48.26" width="0.1524" layer="91"/>
@@ -7332,7 +7332,7 @@ MISO = RP16</text>
 </net>
 <net name="12V" class="0">
 <segment>
-<pinref part="P18" gate="P" pin="1"/>
+<pinref part="P3" gate="P" pin="1"/>
 <wire x1="144.78" y1="68.58" x2="142.24" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="142.24" y1="68.58" x2="142.24" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="142.24" y1="73.66" x2="139.7" y2="73.66" width="0.1524" layer="91"/>
@@ -7343,7 +7343,7 @@ MISO = RP16</text>
 </net>
 <net name="MOSI" class="0">
 <segment>
-<pinref part="P18" gate="P" pin="5"/>
+<pinref part="P3" gate="P" pin="5"/>
 <wire x1="144.78" y1="58.42" x2="137.16" y2="58.42" width="0.1524" layer="91"/>
 <label x="132.08" y="58.42" size="1.778" layer="95"/>
 </segment>
@@ -7355,7 +7355,7 @@ MISO = RP16</text>
 </net>
 <net name="SCK" class="0">
 <segment>
-<pinref part="P18" gate="P" pin="7"/>
+<pinref part="P3" gate="P" pin="7"/>
 <wire x1="144.78" y1="53.34" x2="137.16" y2="53.34" width="0.1524" layer="91"/>
 <label x="132.08" y="53.34" size="1.778" layer="95"/>
 </segment>
@@ -7367,7 +7367,7 @@ MISO = RP16</text>
 </net>
 <net name="!SS" class="0">
 <segment>
-<pinref part="P18" gate="P" pin="8"/>
+<pinref part="P3" gate="P" pin="8"/>
 <wire x1="144.78" y1="50.8" x2="137.16" y2="50.8" width="0.1524" layer="91"/>
 <label x="132.08" y="50.8" size="1.778" layer="95"/>
 </segment>
@@ -7379,7 +7379,7 @@ MISO = RP16</text>
 </net>
 <net name="MISO" class="0">
 <segment>
-<pinref part="P18" gate="P" pin="6"/>
+<pinref part="P3" gate="P" pin="6"/>
 <wire x1="144.78" y1="55.88" x2="137.16" y2="55.88" width="0.1524" layer="91"/>
 <label x="132.08" y="55.88" size="1.778" layer="95"/>
 </segment>
@@ -7391,7 +7391,7 @@ MISO = RP16</text>
 </net>
 <net name="+5V" class="1">
 <segment>
-<pinref part="P18" gate="P" pin="2"/>
+<pinref part="P3" gate="P" pin="2"/>
 <wire x1="144.78" y1="66.04" x2="134.62" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="134.62" y1="66.04" x2="134.62" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="134.62" y1="73.66" x2="132.08" y2="73.66" width="0.1524" layer="91"/>
